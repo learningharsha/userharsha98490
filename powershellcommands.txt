@@ -1,0 +1,69 @@
+get-command -name *IP* -Module Nettcpip
+
+
+Get-NetAdapterBinding
+
+
+get-history | out-file d:\test.txt
+
+
+Get-Service | where-object status -EQ "running" | out-file d:\test.csv
+
+
+Get-Service | Select-Object Name,Status | Format-List | out-file d:\test.csv
+
+
+help Format-List
+
+Get-Service | Select-Object Name,Status | Out-GridView
+
+Get-Help get-wmiobject -Online
+
+Get-Command *counter*
+
+Get-Counter -ListSet *memory* | where countersetname -EQ 'memory' | select -Expand paths
+
+Get-Counter "\memory\% committed bytes in use"
+
+Get-CimClass Win32_PhysicalMemory
+
+Get-CimClass -ClassName *bios*
+
+Get-WmiObject -Class win32_logicaldisk
+
+Get-WmiObject -Class win32_bios
+
+Get-WmiObject Win32_bios | select Name,version
+
+GCM *event*
+
+help get-eventlog -Examples
+
+
+get-eventlog -LogName
+
+ipconfig\all
+
+GCM *IP*
+
+Get-NetIPConfiguration
+help Get-ChildItem -Examples
+
+
+Get-Childitem -System -File -Recurse
+
+
+Get-ChildItem -Path d:\ -Recurse -Include *.jpg*
+
+gcm *copy*
+
+help Copy-Item -Examples
+
+Copy-Item "D:\test.txt" -Destination "D:\C Drive\2017-Extension" -Recurse -verbose
+
+
+$env:COMPUTERName = "Harsha"
+
+$env:COMPUTERName
+
+Write-Output "The name of the computer is $env:COMPUTERName"
