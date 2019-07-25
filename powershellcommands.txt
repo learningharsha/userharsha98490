@@ -62,8 +62,3 @@ help Copy-Item -Examples
 Copy-Item "D:\test.txt" -Destination "D:\C Drive\2017-Extension" -Recurse -verbose
 
 
-$env:COMPUTERName = "Harsha"
-
-$env:COMPUTERName
-
-Write-Output "The name of the computer is $env:COMPUTERName"
